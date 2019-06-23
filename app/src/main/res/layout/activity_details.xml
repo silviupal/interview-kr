@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/spacing_default"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/text_size_big"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Movie title" />
+
+        <RelativeLayout
+            android:id="@+id/infoSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_double"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleView">
+
+            <ImageView
+                android:id="@+id/moviePosterView"
+                android:layout_width="@dimen/details_image_view_size"
+                android:layout_height="@dimen/details_image_view_size"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/genreView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/moviePosterView"
+                android:layout_marginStart="@dimen/spacing_default"
+                android:layout_toEndOf="@+id/moviePosterView"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="Genre" />
+
+            <TextView
+                android:id="@+id/directorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/spacing_default"
+                android:layout_toEndOf="@+id/moviePosterView"
+                android:text="@string/default_list_information"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="Director" />
+
+            <TextView
+                android:id="@+id/releaseDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/moviePosterView"
+                android:layout_marginStart="@dimen/spacing_default"
+                android:layout_toEndOf="@+id/moviePosterView"
+                android:text="@string/default_list_information"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintStart_toEndOf="@+id/moviePosterView"
+                app:layout_constraintTop_toBottomOf="@+id/directorView"
+                tools:text="Release date" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/writersInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/movie_writer"
+            android:textSize="@dimen/text_size_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infoSection" />
+
+        <TextView
+            android:id="@+id/writerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/writersInfo"
+            tools:text="Writers" />
+
+        <TextView
+            android:id="@+id/actorsInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/movie_actors"
+            android:textSize="@dimen/text_size_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/writerView" />
+
+        <TextView
+            android:id="@+id/actorsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actorsInfo"
+            tools:text="List of actors" />
+
+        <TextView
+            android:id="@+id/plotInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/movie_plot"
+            android:textSize="@dimen/text_size_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actorsView" />
+
+        <TextView
+            android:id="@+id/plotView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plotInfo"
+            tools:text="Plot" />
+
+        <TextView
+            android:id="@+id/awardsInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/movie_awards"
+            android:textSize="@dimen/text_size_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plotView"
+            tools:text="Awards" />
+
+        <TextView
+            android:id="@+id/awardsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awardsInfo"
+            tools:text="Awards" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/default_list_information"
+        android:textSize="@dimen/text_size_title"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Error" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

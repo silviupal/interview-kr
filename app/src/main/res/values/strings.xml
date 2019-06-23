@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Box office</string>
+    <string name="details_activity_title">Details</string>
+    <string name="default_list_information">Search for movies.</string>
+    <string name="search_title">Search</string>
+    <string name="movie_year_format">Year: %s</string>
+
+    <string name="movie_genre_format">Genre: %s</string>
+    <string name="movie_release_date_format">Released: %s</string>
+    <string name="movie_director_format">Director: %s</string>
+    <string name="movie_writer">Writers:</string>
+    <string name="movie_actors">Actors:</string>
+    <string name="movie_plot">Plot:</string>
+    <string name="movie_awards">Awards:</string>
+
+</resources>
