@@ -29,7 +29,7 @@
 
         <TextView
             android:id="@+id/movieTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_default"
             android:layout_marginTop="@dimen/spacing_small"
@@ -40,9 +40,10 @@
             android:singleLine="true"
             android:textSize="@dimen/text_size_title"
             app:layout_constraintBottom_toTopOf="@+id/movieYear"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/moviePosterView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Fly me to the moon" />
+            tools:text="Fly me to the moon and let me play among the stars" />
 
         <TextView
             android:id="@+id/movieYear"
